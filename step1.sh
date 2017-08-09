@@ -2,6 +2,9 @@
 PW=$1
 TELNUM=$2
 if ! [ -r ${PW} ]; then exit 1; fi
+if ! [ -d bin ]; then mkdir bin; fi
+if ! [ -d tmp ]; then mkdir tmp; fi
+if ! [ -d tmp/uploads [; then mkdir tmp/uploads; fi
 if ! [ -r bin/wa_pbkdf2 ]; then gcc -o bin/wa_pbkdf2 src/wa_pbkdf2.c -lcrypto; fi
 
     dd if=${PW} of=tmp/pw_salt bs=1 skip=29 count=4
